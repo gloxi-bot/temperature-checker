@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Checker with Voice Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Temperature Checker </h2>
+
+        <label for="temperature">Enter Temperature (°C):</label>
+        <div class="input-container">
+            <button class="mic-button" onclick="startListening('temperature')">🎤</button>
+            <input type="number" id="temperature" placeholder="e.g. 35">
+        </div>
+        
+        <label for="humidity">Humidity (%):</label>
+        <div class="input-container">
+            <button class="mic-button" onclick="startListening('humidity')">🎤</button>
+            <input type="number" id="humidity" placeholder="e.g. 70">
+        </div>
+
+        <div class="button-container">
+    <button class="check-weather"onclick="calculateWeather()">Check Weather</button>
+</div>
+
+
+        <h3>Result:</h3>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
